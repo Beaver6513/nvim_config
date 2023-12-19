@@ -28,18 +28,18 @@ autopairs: semplice autopairing di parentesi
 
 cmp: autocomplete, trovi i suoi keybinds nel file stesso (per farla breve Tab scorre (alt+Tab al contrario) e poi accetti con Enter)
 
---------IMPORTANTE -----------
+### --------IMPORTANTE -----------
 se vorrai aggiungere dei plugin in futuro, sappi che ho impostato lo stato dei plugin come "lazy" di default.
 Questo mi permette di selezionare manualmente i plugin che voglio che si avviino in automatico quando avvio nvim.
 Se noti in molti dei file plugin imposto "lazy = false", vuol dire che mi servono subito all'avvio. Se hai problemi con alcuni
 plugin può essere quello
 
-------CARTELLA CONFIG-------
+### ------CARTELLA CONFIG-------
 nella cartella config ci sono alcuni file relativi a nvim stesso. Ci trovi le opzioni, i keybinds (anche se buona parte
 sono settati nei file .lua dei plugin direttamente) ed eventuali autocommands. Per ora ho un solo autocommand che lancia la formattazione 
 automatica del file quando salvi con "w". Se vuoi puoi eliminare il file.
 
--------COME AGGIUNGERE LINTERS E/O FORMATTERS E/O LSPs--------------
+### -------COME AGGIUNGERE LINTERS E/O FORMATTERS E/O LSPs--------------
 Dopo averli installati com Mason, potrai impostarli nel file "nvim-lspconfig.lua". Io utilizzo efmls per i config degli lsp.
 Per aggiungere un linguaggio, devi prima controllare se efmls lo supporta, controllando in questa pagina web: 
 "https://github.com/creativenull/efmls-configs-nvim/blob/main/doc/SUPPORTED_LIST.md"
@@ -56,9 +56,9 @@ lspconfig.clangd.setup({
         "--offset-encoding=utf-16",
     },
 })
-'''
+```
 
---------------IMPORTANTE-------------
+### --------------IMPORTANTE-------------
 come puoi notare ho impostato un comando custom per clangd (c e c++), mi serve per il cross-compiling per il mio OS, lo devi togliere 
 quello che fa è, come penso tu possa notare, darmi suggerimenti per architettura i686, per il mio crosscompiler. Togli "cmd = {}"
 --------------------------------------
