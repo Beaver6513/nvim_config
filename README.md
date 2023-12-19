@@ -61,8 +61,8 @@ Dopo aver fatto ciò devi creare una entry all'interno del setup di efm (filetyp
 In pratica inserisci il tipo di file all'interno della variabile filetypes{} e poi dici a efm per quel tipo di file quale linter e formatter (in questo ordine) utilizzare
 
 ### --------------IMPORTANTE-------------
-come puoi notare ho impostato un comando custom per clangd (c e c++), mi serve per il cross-compiling per il mio OS, lo devi togliere 
-quello che fa è, come penso tu possa notare, darmi suggerimenti per architettura i686, per il mio crosscompiler. Togli "cmd = {}"
+come puoi notare ho impostato un comando custom per clangd (c e c++), mi serve per il cross-compiling per il mio OS, lo devi togliere. \
+quello che fa è, come penso tu possa notare, darmi suggerimenti per architettura i686, per il mio crosscompiler. Togli "cmd = {}" \
 Dopo aver fatto il setup dell'lsp, devi importare linter e formatter:
 ```lua
 local cpplint = require("efmls-configs.linters.cpplint")
