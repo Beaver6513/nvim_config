@@ -1,4 +1,4 @@
-Il package manager che utilizzo è Lazy
+Il package manager che utilizzo è Lazy.
 Tra tutti i plugin che utilizzo i più importanti sono:
     whichkey : ti dice quali keybinds puoi utilizzare quando premi un tasto come <leader> o altri
     telescope : penso tu lo conosca, in caso contrario: è il tuo project explorer. 
