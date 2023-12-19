@@ -45,18 +45,19 @@ Per aggiungere un linguaggio, devi prima controllare se efmls lo supporta, contr
 "https://github.com/creativenull/efmls-configs-nvim/blob/main/doc/SUPPORTED_LIST.md"
 Se è presente il linters o formatter, vuol dire che lo puoi usare. Per abilitarlo puoi seguire il codice che ho scritto per abilitare quelli che gia uso.
 
-'''lua
+```lua
 lspconfig.clangd.setup({
-capabilities = capabilities, -- richiesto
-on_attach = on_attach, -- richiesto
-settings = {},  -- eventuali settings
-cmd = { -- non necessario, qui puoi però impostare cose come comandi custom
-"clangd",
-"--query-driver='/home/beaver/BibaOS/toolchain/i686-elf/bin/i686_elf_gcc'",
-"--offset-encoding=utf-16",
-},
+    capabilities = capabilities, -- richiesto
+    on_attach = on_attach, -- richiesto
+    settings = {},  -- eventuali settings
+    cmd = { -- non necessario, qui puoi però impostare cose come comandi custom
+        "clangd",
+        "--query-driver='/home/beaver/BibaOS/toolchain/i686-elf/bin/i686_elf_gcc'",
+        "--offset-encoding=utf-16",
+    },
 })
 '''
+
 --------------IMPORTANTE-------------
 come puoi notare ho impostato un comando custom per clangd (c e c++), mi serve per il cross-compiling per il mio OS, lo devi togliere 
 quello che fa è, come penso tu possa notare, darmi suggerimenti per architettura i686, per il mio crosscompiler. Togli "cmd = {}"
