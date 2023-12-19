@@ -42,7 +42,7 @@ Per ora ho un solo autocommand che lancia la formattazione automatica del file q
 ### -------COME AGGIUNGERE LINTERS E/O FORMATTERS E/O LSPs--------------
 Dopo averli installati com Mason, potrai impostarli nel file "nvim-lspconfig.lua". Io utilizzo efmls per i config degli lsp. \
 Per aggiungere un linguaggio, devi prima controllare se efmls lo supporta, controllando in questa pagina web: \
-"https://github.com/creativenull/efmls-configs-nvim/blob/main/doc/SUPPORTED_LIST.md"\
+"https://github.com/creativenull/efmls-configs-nvim/blob/main/doc/SUPPORTED_LIST.md" \
 Se è presente il linters o formatter, vuol dire che lo puoi usare. Per abilitarlo puoi seguire il codice che ho scritto per abilitare quelli che gia uso.
 
 ```lua
@@ -57,6 +57,8 @@ lspconfig.clangd.setup({
     },
 })
 ```
+Dopo aver fatto ciò devi creare una entry all'interno del setup di efm (filetype e settings/languages).\
+In pratica inserisci il tipo di file all'interno della variabile filetypes{} e poi dici a efm per quel tipo di file quale linter e formatter (in questo ordine) utilizzare
 
 ### --------------IMPORTANTE-------------
 come puoi notare ho impostato un comando custom per clangd (c e c++), mi serve per il cross-compiling per il mio OS, lo devi togliere 
@@ -66,8 +68,7 @@ Dopo aver fatto il setup dell'lsp, devi importare linter e formatter:
 local cpplint = require("efmls-configs.linters.cpplint")
 local clang_format = require("efmls-configs.formatters.clang_format")
 ```
-Dopo aver farro ciò devi creare una entry all'interno del setup di efm (filetype e settings/languages).\
-In pratica inserisci il tipo di file all'interno della variabile filetypes{} e poi dici a efm per quel tipo di file quale linter e formatter (in questo ordine) utilizzare
+
 
 
 
