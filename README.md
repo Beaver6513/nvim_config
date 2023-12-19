@@ -1,19 +1,31 @@
-Il package manager che utilizzo è Lazy.\n
+Il package manager che utilizzo è Lazy.
+
 Tra tutti i plugin che utilizzo i più importanti sono:
+
     whichkey : ti dice quali keybinds puoi utilizzare quando premi un tasto come <leader> o altri
+
     telescope : penso tu lo conosca, in caso contrario: è il tuo project explorer. 
                 puoi trovare tutte le keybinds nel corrispettivo file .lua in plugins/
+
     onedarkplus: è il tema. Se vuoi cambiarlo, dovrai cambiare il nome del plugin installato nel file onedarkplus.lua.
                  come potrai notare il setup del colorscheme è fatto direttamente nel .lua del tema (vim.cmd("colorscheme onedark"))
+
     treesitter: semplice syntax highligthing, installa i pacchetti da solo, puoi anche scordarti che è li, funziona uguale.
+
     noice: invece di scrivere i messaggi di stato in fondo sotto la barra comandi, li stampa in una finestra in alto a destra, puoi toglierlo se vuoi
+
     lualine: semplicemente una barra in basso più figa
+
     lspsaga: ti permette di fare cose come "goto implementation" o "goto definition"
              Lo uso con c e c++ e solo il "goto implementation" per qualche motivo non mi funziona
+
     hardtime: è un simpatico plugin che quando utilizzi dei comandi poco efficienti te lo dice, e ti da dei consigli su come migliorare
               Eliminalo se vuoi
+
     comment: puoi commentare codice selezionandolo e premendo "gc", funziona con tutti i linguaggi che ho potuto usare finora
+
     autopairs: semplice autopairing di parentesi
+
     cmp: autocomplete, trovi i suoi keybinds nel file stesso (per farla breve Tab scorre (alt+Tab al contrario) e poi accetti con Enter)
 
     --------IMPORTANTE -----------
